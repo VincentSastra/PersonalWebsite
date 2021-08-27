@@ -44,7 +44,6 @@ export default {
 				dev: !production
 			},
 			preprocess: sveltePreprocess({
-				sourceMap: !production,
 				postcss: {
 					plugins: [
 						require("tailwindcss"),
