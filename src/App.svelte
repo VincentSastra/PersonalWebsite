@@ -10,12 +10,20 @@
 	href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
 	rel="stylesheet"
 />
+
+<div class="text-white flex flex-row justify-end fixed w-screen top-0 pr-4">
+	<div class="navigation-button">Skills</div>
+	<div class="navigation-button">Portfolio</div>
+	<div class="navigation-button">Contact</div>
+	<div class="navigation-button">Resume</div>
+</div>
+
 <div class="flex content-center m-12 md:m-24 2xl:my-0 2xl:h-screen">
 	<div class="flex-col 2xl:flex-row flex-nowrap flex m-auto">
 		<div class="flex-grow content-center flex">
-			<div class="text-white m-auto flex flex-grow flex-col max-w-4xl lg:mr-20">
-				<div class="text-5xl md:text-8xl pb-6 md:pb-12 lg:pl-16">Hi, I'm</div>
-				<div class="text-6xl md:text-9xl pb-6 md:pb-12 lg:pl-36 font-extrabold text-center lg:text-left max-w-4xl futura-bold">
+			<div class="text-white m-auto flex flex-grow flex-col max-w-4xl 2xl:mr-20">
+				<div class="text-5xl md:text-8xl pb-6 md:pb-12 2xl:pl-16">Hi, I'm</div>
+				<div class="text-6xl md:text-9xl pb-6 md:pb-12 2xl:pl-36 font-extrabold text-center 2xl:text-left max-w-4xl futura-bold">
 					Vincent!
 				</div>
 				<div class="text-xl pb-12 md:pb-24 md:text-4xl font-sans max-w-4xl">
@@ -50,6 +58,9 @@
 		}
 		.futura-bold {
 			font-family: "FuturaBold", sans-serif;
+		}
+		.navigation-button {
+			@apply px-2 lg:px-8 py-4 lg:py-8 text-sm lg:text-xl 2xl:text-3xl
 		}
 	}
 	@font-face {
