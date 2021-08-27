@@ -12,7 +12,7 @@ module.exports = {
     },
     height: {
       xxl: '134px',
-    }
+    },
   },
   variants: {
     extend: {},
