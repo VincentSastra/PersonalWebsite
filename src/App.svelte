@@ -1,8 +1,13 @@
 <script>
 	import "tailwindcss/tailwind.css";
 	import "styles/main.scss";
-	let name = "world";
 </script>
+
+<svelte:head>
+	<script
+		src="https://kit.fontawesome.com/b43798ce01.js"
+		crossorigin="anonymous"></script>
+</svelte:head>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,28 +26,65 @@
 <div class="flex content-center m-12 md:m-24 2xl:my-0 2xl:h-screen">
 	<div class="flex-col 2xl:flex-row flex-nowrap flex m-auto">
 		<div class="flex-grow content-center flex">
-			<div class="text-white m-auto flex flex-grow flex-col max-w-4xl 2xl:mr-20">
-				<div class="text-5xl md:text-8xl pb-6 md:pb-12 2xl:pl-16">Hi, I'm</div>
-				<div class="text-6xl md:text-9xl pb-6 md:pb-12 2xl:pl-36 font-extrabold text-center 2xl:text-left max-w-4xl futura-bold">
+			<div
+				class="text-white m-auto flex flex-grow flex-col max-w-4xl 2xl:mr-20"
+			>
+				<div class="text-5xl md:text-8xl pb-6 md:pb-12 2xl:pl-16">
+					Hi, I'm
+				</div>
+				<div
+					class="text-6xl md:text-9xl pb-6 md:pb-12 2xl:pl-36 font-extrabold text-center 2xl:text-left max-w-4xl futura-bold"
+				>
 					Vincent!
 				</div>
-				<div class="text-xl pb-12 md:pb-24 md:text-4xl font-sans max-w-4xl">
-					<span class="font-bold text-2xl md:text-5xl">Software Engineer</span><br /> 
-					<span class="font-bold">University of British Columbia</span>
+				<div
+					class="text-xl pb-6 md:pb-12 md:text-4xl font-sans max-w-4xl"
+				>
+					<span class="font-bold text-2xl md:text-5xl"
+						>Software Engineer</span
+					><br />
+					<span class="font-bold">University of British Columbia</span
+					>
+				</div>
+				<div
+					class="pb-12 md:pb-24 flex-row flex justify-evenly 2xl:justify-start w-full"
+				>
+					<i class="fab fa-github fa-3x 2xl:pr-8" />
+					<i class="fab fa-linkedin fa-3x 2xl:pr-8" />
+					<i class="fas fa-inbox fa-3x 2xl:pr-8" />
 				</div>
 			</div>
 		</div>
 		<div class="flex-grow content-center flex">
 			<div class="m-auto">
-				<img class="photo-size object-cover absolute z-20" src="ProfilePhoto.JPG" alt="profile" />
+				<img
+					class="photo-size object-cover absolute z-20"
+					src="ProfilePhoto.JPG"
+					alt="profile"
+				/>
 				<div class="p-6 sm:p-12 h-0">
-					<div class="border-8 border-white photo-size absolute z-10" />
+					<div
+						class="border-8 border-white photo-size absolute z-10"
+					/>
 				</div>
 				<div class="pl-12 sm:pl-24">
-					<div class="photo-size bg-primary"></div>
+					<div class="photo-size bg-primary" />
 				</div>
 			</div>
 		</div>
+	</div>
+</div>
+
+<div class="fixed top-full w-full flex flex-row justify-center  z-40">
+	<div
+		class="bg-primary flex justify-center content-center border-2 rounded-full
+				w-20 h-20 -mt-32
+				lg:w-32 lg:h-32 lg:-mt-48
+	"
+	>
+		<i class="fas fa-arrow-down text-5xl flex h-12 my-4
+					lg:h-24 lg:text-8xl lg:my-4
+		" />
 	</div>
 </div>
 
@@ -60,7 +102,7 @@
 			font-family: "FuturaBold", sans-serif;
 		}
 		.navigation-button {
-			@apply px-2 lg:px-8 py-4 lg:py-8 text-sm lg:text-xl 2xl:text-3xl
+			@apply px-2 lg:px-8 py-4 lg:py-8 text-sm lg:text-xl 2xl:text-3xl;
 		}
 	}
 	@font-face {
@@ -81,7 +123,7 @@
 			U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
 			U+2212, U+2215, U+FEFF, U+FFFD;
 	}
-	
+
 	:global(body) {
 		background-color: #2b4570;
 		font-family: "Poppins", sans-serif;
