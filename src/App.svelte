@@ -6,6 +6,7 @@
 	import "tailwindcss/tailwind.css";
 	import "styles/main.scss";
 	import SkillTable from "./SkillTable.svelte";
+	import Visibility from "./Visibility.svelte";
 
 	function preload() {
 		return new Promise(async (resolve) => {
@@ -121,7 +122,20 @@
 <div
 	class="flex content-center p-12 md:p-24 2xl:my-0 2xl:h-screen bg-primary justify-center"
 >
-	<SkillTable />
+	<Visibility
+		steps={100}
+		let:percent
+		let:unobserve
+		let:intersectionObserverSupport
+	>
+		<div style="opacity: {percent / 40 - 1}">
+			<SkillTable />
+		</div>
+	</Visibility>
+</div>
+
+<div class="h-screen bg-secondary">
+
 </div>
 
 <style global lang="postcss">
