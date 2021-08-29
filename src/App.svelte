@@ -115,6 +115,10 @@
 			width: min(45vh, 60vw);
 			height: min(63vh, 84vw);
 		}
+		.table-size {
+			width: min(60vh, 90vw);
+			height: min(63vh, 84vw);
+		}
 		.futura-bold {
 			font-family: "FuturaBold", sans-serif;
 		}
@@ -145,5 +149,6 @@
 		background-color: #2b4570;
 		font-family: "Poppins", sans-serif;
 		padding: 0px;
+		@apply md:text-3xl text-xl
 	}
 </style>

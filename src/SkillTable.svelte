@@ -1,4 +1,6 @@
 <script>
+	import { fly, fade } from "svelte/transition";
+
 	let activeTab = 0;
 
 	let data = [
@@ -30,7 +32,7 @@
 			{#each data as row, i}
 				<div
 					on:click={() => (activeTab = i)}
-					class="p-2 z-10  border-l-4 border-opacity-30 transition-all
+					class="p-4 z-10  border-l-4 border-opacity-30 transition-all
 					{activeTab === i ? 'bg-secondary' : 'border-secondary '}
 				"
 				>
@@ -40,12 +42,20 @@
 		</div>
 		<div>
 			<div class="absolute p-8 sm:p-14">
-				<div class="bg-none photo-size absolute border-8 z-0" />
+				<div class="bg-none table-size absolute border-8 z-0" />
 			</div>
 		</div>
-		<div class="bg-tertiary m-2 p-2 photo-size z-10">
-			{#each data[activeTab].value as item}
-				<div class="z-10">• {item}</div>
+		<div class="bg-tertiary m-1 p-8 table-size z-10">
+			{#each data as row, i}
+				<div class="absolute table-size h-auto grid grid-cols-2 place-content-evenly">
+					{#if i === activeTab}
+						{#each row.value as item}
+							<div in:fly={{ y: 200, duration: 1000 }} out:fade>
+								• {item}
+							</div>
+						{/each}
+					{/if}
+				</div>
 			{/each}
 		</div>
 	</div>
@@ -60,7 +70,7 @@
 			</div>
 			<div
 				class="border-l-8 border-secondary border-opacity-40 bg-tertiary p-2 transition-all overflow-hidden
-					{row.active ? "" : "h-0 p-0"}
+					{row.active ? '' : 'h-0 p-0'}
 				"
 			>
 				{#each row.value as item}
