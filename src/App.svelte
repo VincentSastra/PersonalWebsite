@@ -1,7 +1,12 @@
 <script>
 	import "tailwindcss/tailwind.css";
 	import "styles/main.scss";
+	import SkillTable from "./SkillTable.svelte";
+
+	let y;
 </script>
+
+<svelte:window bind:scrollY={y} />
 
 <svelte:head>
 	<script
@@ -16,14 +21,16 @@
 	rel="stylesheet"
 />
 
-<div class="text-white flex flex-row justify-end fixed w-screen top-0 pr-4">
+<div
+	class="text-white z-50 flex flex-row justify-end fixed w-screen top-0 pr-4"
+>
 	<div class="navigation-button">Skills</div>
 	<div class="navigation-button">Portfolio</div>
 	<div class="navigation-button">Contact</div>
 	<div class="navigation-button">Resume</div>
 </div>
 
-<div class="flex content-center m-12 md:m-24 2xl:my-0 2xl:h-screen">
+<div class="flex content-center p-12 md:p-24 2xl:my-0 2xl:min-h-screen">
 	<div class="flex-col 2xl:flex-row flex-nowrap flex m-auto">
 		<div class="flex-grow content-center flex">
 			<div
@@ -75,17 +82,27 @@
 	</div>
 </div>
 
-<div class="fixed top-full w-full flex flex-row justify-center  z-40">
+<div
+	style="opacity: {(100 - y) / 100}"
+	class="fixed top-full w-full flex flex-row justify-center z-40"
+>
 	<div
 		class="bg-primary flex justify-center content-center border-2 rounded-full
 				w-20 h-20 -mt-32
-				lg:w-32 lg:h-32 lg:-mt-48
-	"
+				lg:w-32 lg:h-32 lg:-mt-48"
 	>
-		<i class="fas fa-arrow-down text-5xl flex h-12 my-4
+		<i
+			class="fas fa-arrow-down text-5xl flex h-12 my-4
 					lg:h-24 lg:text-8xl lg:my-4
-		" />
+		"
+		/>
 	</div>
+</div>
+
+<div
+	class="flex content-center p-12 md:p-24 2xl:my-0 2xl:h-screen bg-primary justify-center"
+>
+	<SkillTable />
 </div>
 
 <style global lang="postcss">

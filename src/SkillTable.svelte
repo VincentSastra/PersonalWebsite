@@ -1,0 +1,72 @@
+<script>
+	let activeTab = 0;
+
+	let data = [
+		{
+			key: "General Skills",
+			value: ["JavaScript", "Python", "SQL", "Java"],
+			active: true,
+		},
+		{
+			key: "Web Development",
+			value: ["React", "Node", "JavaScript", "HTML", "CSS"],
+			active: false,
+		},
+		{
+			key: "Mobile Development",
+			value: ["Android", "iOS", "Flutter"],
+			active: false,
+		},
+	];
+
+	$: outerWidth = 0;
+</script>
+
+<svelte:window bind:outerWidth />
+
+{#if outerWidth > 1100}
+	<div class="flex flex-row text-white z-10">
+		<div class="flex flex-col z-10 mt-1 ">
+			{#each data as row, i}
+				<div
+					on:click={() => (activeTab = i)}
+					class="p-2 z-10  border-l-4 border-opacity-30 transition-all
+					{activeTab === i ? 'bg-secondary' : 'border-secondary '}
+				"
+				>
+					{row.key}
+				</div>
+			{/each}
+		</div>
+		<div>
+			<div class="absolute p-8 sm:p-14">
+				<div class="bg-none photo-size absolute border-8 z-0" />
+			</div>
+		</div>
+		<div class="bg-tertiary m-2 p-2 photo-size z-10">
+			{#each data[activeTab].value as item}
+				<div class="z-10">• {item}</div>
+			{/each}
+		</div>
+	</div>
+{:else}
+	<div class="flex flex-col text-white z-10 w-full max-w-lg">
+		{#each data as row}
+			<div
+				on:click={() => (row.active = !row.active)}
+				class="p-2 bg-secondary z-10 w-full border-t-2 border-primary transition-all"
+			>
+				{row.key}
+			</div>
+			<div
+				class="border-l-8 border-secondary border-opacity-40 bg-tertiary p-2 transition-all overflow-hidden
+					{row.active ? "" : "h-0 p-0"}
+				"
+			>
+				{#each row.value as item}
+					<div class="z-10">{item}</div>
+				{/each}
+			</div>
+		{/each}
+	</div>
+{/if}
