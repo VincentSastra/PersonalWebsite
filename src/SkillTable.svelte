@@ -6,12 +6,27 @@
 	let data = [
 		{
 			key: "General Skills",
-			value: ["JavaScript", "Python", "SQL", "Java"],
+			value: ["JavaScript", "SQL", "AWS", "Linux", "Git"],
 			active: true,
 		},
 		{
+			key: "Programming Language",
+			value: ["JavaScript", "Java", "Python", "C#", "Golang", "HTML", "CSS"],
+			active: false,
+		},
+		{
 			key: "Web Development",
-			value: ["React", "Node", "JavaScript", "HTML", "CSS"],
+			value: ["React", "Node", "JavaScript", "HTML", "CSS", "GraphQL", "Svelte", "SCSS", "Tailwind"],
+			active: false,
+		},
+		{
+			key: "Automation and Deployment",
+			value: ["Jenkins", "Docker", "Kubernetes", "Helm Chart", "AWS", "Linux"],
+			active: false,
+		},
+		{
+			key: "Game Development",
+			value: ["Unity", "C#"],
 			active: false,
 		},
 		{
