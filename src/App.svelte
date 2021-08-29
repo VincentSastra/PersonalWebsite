@@ -1,7 +1,19 @@
 <script>
+	import { slide } from "svelte/transition";
+	import { quintOut } from "svelte/easing";
+	import { onMount } from "svelte";
+
 	import "tailwindcss/tailwind.css";
 	import "styles/main.scss";
 	import SkillTable from "./SkillTable.svelte";
+
+	function preload() {
+		return new Promise(async (resolve) => {
+			let img = new Image();
+			img.onload = resolve;
+			img.src = "ProfilePhoto.JPG";
+		});
+	}
 
 	let y;
 </script>
@@ -30,56 +42,63 @@
 	<div class="navigation-button">Resume</div>
 </div>
 
-<div class="flex content-center p-12 md:p-24 2xl:my-0 2xl:min-h-screen">
-	<div class="flex-col 2xl:flex-row flex-nowrap flex m-auto">
-		<div class="flex-grow content-center flex">
-			<div
-				class="text-white m-auto flex flex-grow flex-col max-w-4xl 2xl:mr-20"
-			>
-				<div class="text-5xl md:text-8xl pb-6 md:pb-12 2xl:pl-16">
-					Hi, I'm
-				</div>
+<div class="flex content-center p-12 md:p-24 2xl:my-0 min-h-screen">
+	{#await preload() then _}
+		<div
+			transition:slide={{ delay: 0, duration: 2000, easing: quintOut }}
+			class="flex-col 2xl:flex-row flex-nowrap flex m-auto"
+		>
+			<div class="flex-grow content-center flex">
 				<div
-					class="text-6xl md:text-9xl pb-6 md:pb-12 2xl:pl-36 font-extrabold text-center 2xl:text-left max-w-4xl futura-bold"
+					class="text-white m-auto flex flex-grow flex-col max-w-4xl 2xl:mr-20"
 				>
-					Vincent!
-				</div>
-				<div
-					class="text-xl pb-6 md:pb-12 md:text-4xl font-sans max-w-4xl"
-				>
-					<span class="font-bold text-2xl md:text-5xl"
-						>Software Engineer</span
-					><br />
-					<span class="font-bold">University of British Columbia</span
-					>
-				</div>
-				<div
-					class="pb-12 md:pb-24 flex-row flex justify-evenly 2xl:justify-start w-full"
-				>
-					<i class="fab fa-github fa-3x 2xl:pr-8" />
-					<i class="fab fa-linkedin fa-3x 2xl:pr-8" />
-					<i class="fas fa-inbox fa-3x 2xl:pr-8" />
-				</div>
-			</div>
-		</div>
-		<div class="flex-grow content-center flex">
-			<div class="m-auto">
-				<img
-					class="photo-size object-cover absolute z-20"
-					src="ProfilePhoto.JPG"
-					alt="profile"
-				/>
-				<div class="p-6 sm:p-12 h-0">
+					<div class="text-5xl md:text-8xl pb-6 md:pb-12 2xl:pl-16">
+						Hi, I'm
+					</div>
 					<div
-						class="border-8 border-white photo-size absolute z-10"
-					/>
+						class="text-6xl md:text-9xl pb-6 md:pb-12 2xl:pl-36 font-extrabold text-center 2xl:text-left max-w-4xl futura-bold"
+					>
+						Vincent!
+					</div>
+					<div
+						class="text-xl pb-6 md:pb-12 md:text-4xl font-sans max-w-4xl"
+					>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore
+						magna aliqua.
+					</div>
+					<div
+						class="pb-12 md:pb-24 flex-row flex justify-evenly 2xl:justify-start w-full"
+					>
+						<div class="icon-size">
+							<i class="fab fa-github fa-3x 2xl:pr-8" />
+						</div>
+						<div class="icon-size">
+							<i class="fab fa-linkedin fa-3x 2xl:pr-8" />
+						</div>
+						<div class="icon-size">
+							<i class="fas fa-inbox fa-3x 2xl:pr-8" />
+						</div>
+					</div>
 				</div>
-				<div class="pl-12 sm:pl-24">
-					<div class="photo-size bg-primary" />
+			</div>
+			<div class="flex-grow content-center flex photo-size mb-16 mr-16">
+				<div class="m-auto pl-12 pt-16 photo-size relative">
+					<div class="photo-size bg-primary">
+						<div
+							class="border-8 border-white photo-size relative -top-6 right-6 z-10"
+						>
+							<img
+								class=" photo-size object-cover -top-8 right-6 relative z-20"
+								src="ProfilePhoto.JPG"
+								alt="profile"
+							/>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	{/await}
 </div>
 
 <div
@@ -125,6 +144,10 @@
 		.navigation-button {
 			@apply px-2 lg:px-8 py-4 lg:py-8 text-sm lg:text-xl 2xl:text-3xl;
 		}
+		.icon-size {
+			width: 4em;
+			height: 3em;
+		}
 	}
 	@font-face {
 		font-family: "Poppins";
@@ -149,6 +172,6 @@
 		background-color: #2b4570;
 		font-family: "Poppins", sans-serif;
 		padding: 0px;
-		@apply md:text-3xl text-xl
+		@apply md:text-3xl text-xl;
 	}
 </style>
