@@ -7,6 +7,7 @@
 	import "styles/main.scss";
 	import SkillTable from "./SkillTable.svelte";
 	import Visibility from "./Visibility.svelte";
+import Safe from "./Experience/Safe.svelte";
 
 	function preload() {
 		return new Promise(async (resolve) => {
@@ -51,18 +52,18 @@
 		>
 			<div class="flex-grow content-center flex">
 				<div
-					class="text-white m-auto flex flex-grow flex-col max-w-4xl 2xl:mr-20"
+					class="text-sixth m-auto flex flex-grow flex-col max-w-4xl 2xl:mr-20"
 				>
-					<div class="text-5xl md:text-8xl pb-6 md:pb-12 2xl:pl-16">
+					<div class="text-secondary-size pb-6 md:pb-12 2xl:pl-16">
 						Hi, I'm
 					</div>
 					<div
-						class="text-6xl md:text-9xl pb-6 md:pb-12 2xl:pl-36 font-extrabold text-center 2xl:text-left max-w-4xl futura-bold"
+						class="text-title-size pb-6 md:pb-12 2xl:pl-36 text-center 2xl:text-left max-w-4xl"
 					>
 						Vincent!
 					</div>
 					<div
-						class="text-xl pb-6 md:pb-12 md:text-4xl font-sans max-w-4xl"
+						class="text-normal-size pb-6 md:pb-12 font-sans max-w-4xl"
 					>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 						sed do eiusmod tempor incididunt ut labore et dolore
@@ -87,7 +88,7 @@
 				<div class="m-auto pl-12 pt-16 photo-size relative">
 					<div class="photo-size bg-primary">
 						<div
-							class="border-8 border-white photo-size relative -top-6 right-6 z-10"
+							class="border-8 border-none photo-size relative -top-6 right-6 z-10"
 						>
 							<img
 								class=" photo-size object-cover -top-8 right-6 relative z-20"
@@ -104,7 +105,7 @@
 
 <div
 	style="opacity: {(100 - y) / 100}"
-	class="fixed top-full w-full flex flex-row justify-center z-40"
+	class="fixed top-full w-full flex flex-row justify-center z-40 2xl:hidden"
 >
 	<div
 		class="bg-primary flex justify-center content-center border-2 rounded-full
@@ -120,7 +121,7 @@
 </div>
 
 <div
-	class="flex content-center p-12 md:p-24 2xl:my-0 2xl:h-screen bg-primary justify-center"
+	class="flex content-center p-12 md:p-24 2xl:my-0 2xl:h-screen bg-fifth justify-center"
 >
 	<Visibility
 		steps={100}
@@ -134,8 +135,8 @@
 	</Visibility>
 </div>
 
-<div class="h-screen bg-secondary">
-
+<div class="h-screen bg-tertiary p-12 md:p-24">
+	<Safe />
 </div>
 
 <style global lang="postcss">
@@ -144,13 +145,25 @@
 	@tailwind utilities;
 
 	@layer components {
+		.text-title-size {
+			@apply text-6xl md:text-9xl futura-bold font-extrabold
+		}
+		.text-secondary-size {
+			@apply text-5xl md:text-8xl 
+		}
+		.text-tertiary-size {
+			@apply text-3xl md:text-5xl
+		}
+		.text-normal-size {
+			@apply text-xl md:text-4xl
+		}
 		.photo-size {
 			width: min(45vh, 60vw);
 			height: min(63vh, 84vw);
 		}
 		.table-size {
 			width: min(60vh, 90vw);
-			height: min(63vh, 84vw);
+			height: min(31vh, 42vw);
 		}
 		.futura-bold {
 			font-family: "FuturaBold", sans-serif;
@@ -161,6 +174,18 @@
 		.icon-size {
 			width: 4em;
 			height: 3em;
+		}
+
+		.logo-size {
+			width: 100%;
+		}
+		@media (min-width: 768px) {
+			.logo-size {
+				width: 40vw;
+			}
+			.content-text {
+				padding-left: 36vw;
+			}
 		}
 	}
 	@font-face {
@@ -183,9 +208,8 @@
 	}
 
 	:global(body) {
-		background-color: #2b4570;
 		font-family: "Poppins", sans-serif;
 		padding: 0px;
-		@apply md:text-3xl text-xl;
+		@apply md:text-3xl text-xl bg-secondary;
 	}
 </style>

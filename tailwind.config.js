@@ -20,9 +20,17 @@ module.exports = {
   plugins: [],
   theme: {
     colors: {
-      primary: '#A8D0DB',
-      secondary: '#2B4570',
-      tertiary: '#7180AC',
+      primary: 
+
+      // primary: '#ACD1E9',
+      // blue: '#ACD1E9',
+      // blueDark: '#84BBDE',
+      // secondary: '#F5FAFA',
+      // tertiary: '#E8D0A9',
+      // fourth: '#B7AFA3',
+      // fifth: '#C1DAD6',
+      // sixth: '#6D929B',
+      // seventh: '#417582',
       white: '#FFFFFF',
     }
   }

@@ -42,13 +42,14 @@
 <svelte:window bind:outerWidth />
 
 {#if outerWidth > 1100}
+	<div class="text-seventh text-tertiary-size futura-bold pb-6">My Skills</div>
 	<div class="flex flex-row text-white z-10">
 		<div class="flex flex-col z-10 mt-1 ">
 			{#each data as row, i}
 				<div
 					on:click={() => (activeTab = i)}
-					class="p-4 z-10  border-l-4 border-opacity-30 transition-all
-					{activeTab === i ? 'bg-secondary' : 'border-secondary '}
+					class="p-4 z-10  border-l-4 border-opacity-70 transition-all
+					{activeTab === i ? 'bg-seventh' : 'border-sixth text-seventh'}
 				"
 				>
 					{row.key}
@@ -60,7 +61,7 @@
 				<div class="bg-none table-size absolute border-8 z-0" />
 			</div>
 		</div>
-		<div class="bg-tertiary m-1 p-8 table-size z-10">
+		<div class="bg-sixth m-1 p-8 table-size z-10">
 			{#each data as row, i}
 				<div class="absolute table-size h-auto grid grid-cols-2 place-content-evenly">
 					{#if i === activeTab}
