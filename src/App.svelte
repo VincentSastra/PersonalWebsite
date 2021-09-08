@@ -1,5 +1,6 @@
 <script>
 import Project from "./Project.svelte";
+import Skill from "./Skill.svelte";
 
 </script>
 
@@ -42,6 +43,22 @@ import Project from "./Project.svelte";
 	</div>
 </div>
 
+<div class="min-w-full min-h-full flex bg-white text-black">
+	<div class="flex flex-col flex-grow flex-basis-0 justify-center pl-16 pr-32">
+		<div class="text-4xl mb-10">Me, Myself, and I</div>
+		<div class="text-2xl">Fugiat ut occaecat qui voluptate deserunt tempor. 
+			Deserunt ullamco nulla qui ea dolor ullamco. 
+			Duis et excepteur occaecat dolor non est dolor reprehenderit non amet cillum ad laboris. 
+			Minim est ea labore do nisi enim consectetur nulla in anim qui voluptate laboris.</div>
+	</div>
+	<div class="grid grid-cols-2 flex-grow flex-basis-0 skill-bg">
+		<Skill />
+		<Skill />
+		<Skill />
+		<Skill />
+	</div>
+</div>
+
 <style global lang="postcss">
 	@tailwind base;
 	@tailwind components;
@@ -51,13 +68,15 @@ import Project from "./Project.svelte";
 		.flex-basis-0 {
 			flex-basis: 0;
 		}
-
 		.portfolio-size {
 			height: 580px;
 			width: 340px;
 		}
 		.portfolio-grid {
 			grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+		}
+		.skill-bg {
+			background-image: linear-gradient(to bottom left, #F79D65, #E5E5E5);
 		}
 	}
 	:global(body) {
