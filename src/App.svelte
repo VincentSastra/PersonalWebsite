@@ -52,7 +52,7 @@ import Safe from "./Experience/Safe.svelte";
 		>
 			<div class="flex-grow content-center flex">
 				<div
-					class="text-sixth m-auto flex flex-grow flex-col max-w-4xl 2xl:mr-20"
+					class="text-white m-auto flex flex-grow flex-col max-w-4xl 2xl:mr-20"
 				>
 					<div class="text-secondary-size pb-6 md:pb-12 2xl:pl-16">
 						Hi, I'm

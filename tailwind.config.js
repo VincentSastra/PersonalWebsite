@@ -20,7 +20,11 @@ module.exports = {
   plugins: [],
   theme: {
     colors: {
-      primary: 
+      primary: '#A6886D',
+      secondary: '#260C02',
+      tertiary: '#F2F2F2',
+      fourth: '#F26A1B',
+      fifth: '#8C4216',
 
       // primary: '#ACD1E9',
       // blue: '#ACD1E9',
