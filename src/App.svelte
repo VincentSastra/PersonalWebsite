@@ -1,7 +1,7 @@
 <script>
 import Project from "./Project.svelte";
 import Skill from "./Skill.svelte";
-
+import * as data from './data.json'
 </script>
 
 <div class="fixed w-full bg-ltorange flex py-5">
@@ -21,8 +21,8 @@ import Skill from "./Skill.svelte";
 		<div class="text-6xl mb-8">Hi, it's me</div>
 		<div class="text-9xl mb-8 flex">Vincent<div class="w-8 h-8 bg-orange rounded-full ml-2 mb-2 my-auto"></div></div>
 		<div class="text-6xl mb-4 title-color">A software developer</div>
-		<div class="text-2xl">In proident minim ut reprehenderit consequat culpa labore.</div>
-		<div class="text-2xl">Ad tempor veniam eu est ut eu minim elit.</div>
+		<div class="text-2xl">{data.landingText[0]}</div>
+		<div class="text-2xl">{data.landingText[1]}</div>
 	</div>
 	<div class="flex flex-col flex-grow min-w-0 flex-basis-0 justify-center">
 		<img class="max-h-96 object-cover px-24" src="https://via.placeholder.com/150" alt="me" />
