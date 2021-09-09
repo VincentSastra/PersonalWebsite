@@ -15,7 +15,8 @@ module.exports = {
     colors: {
       black: '#000000',
       white: '#E5E5E5',
-      orange: '#F79D65'
+      orange: '#F27059',
+      ltorange: '#F4845F'
     }
   }
 }

@@ -4,7 +4,7 @@ import Skill from "./Skill.svelte";
 
 </script>
 
-<div class="fixed w-full bg-orange flex py-2 ">
+<div class="fixed w-full bg-ltorange flex py-5">
 	<div class="flex-grow flex justify-center content-center text-4xl my-auto">
 		<div class="bg-black rounded-full h-8 w-8 my-auto mr-2" /> Vincent Sastra
 	</div>
@@ -20,7 +20,7 @@ import Skill from "./Skill.svelte";
 	<div class="flex flex-col flex-grow flex-basis-0 justify-center pl-16">
 		<div class="text-6xl mb-8">Hi, it's me</div>
 		<div class="text-9xl mb-8 flex">Vincent<div class="w-8 h-8 bg-orange rounded-full ml-2 mb-2 my-auto"></div></div>
-		<div class="text-6xl mb-4">A software developer</div>
+		<div class="text-6xl mb-4 title-color">A software developer</div>
 		<div class="text-2xl">In proident minim ut reprehenderit consequat culpa labore.</div>
 		<div class="text-2xl">Ad tempor veniam eu est ut eu minim elit.</div>
 	</div>
@@ -45,7 +45,7 @@ import Skill from "./Skill.svelte";
 
 <div class="min-w-full min-h-full flex bg-white text-black">
 	<div class="flex flex-col flex-grow flex-basis-0 justify-center pl-16 pr-32">
-		<div class="text-4xl mb-10">Me, Myself, and I</div>
+		<div class="text-6xl mb-10">Me, Myself, and I</div>
 		<div class="text-2xl">Fugiat ut occaecat qui voluptate deserunt tempor. 
 			Deserunt ullamco nulla qui ea dolor ullamco. 
 			Duis et excepteur occaecat dolor non est dolor reprehenderit non amet cillum ad laboris. 
@@ -57,6 +57,11 @@ import Skill from "./Skill.svelte";
 		<Skill />
 		<Skill />
 	</div>
+</div>
+
+<div class="min-w-full flex">
+	<div>My Timeline</div>
+	<div></div>
 </div>
 
 <style global lang="postcss">
@@ -76,11 +81,15 @@ import Skill from "./Skill.svelte";
 			grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
 		}
 		.skill-bg {
-			background-image: linear-gradient(to bottom left, #F79D65, #E5E5E5);
+			background-image: linear-gradient(to bottom left, #F27059, #E5E5E5);
+		}
+		.title-color {
+			background-image: linear-gradient(350deg, #E5E5E5, #F27059);			
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
 		}
 	}
 	:global(body) {
-		background-color: #2B4570;
-		@apply m-0 p-0;
+		@apply m-0 p-0 bg-white;
 	}
 </style>
