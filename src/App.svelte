@@ -18,16 +18,16 @@ import * as data from './data.json'
 	</div>
 </div>
 
-<div class="min-h-full min-w-full flex bg-black text-white">
-	<div class="flex flex-col flex-grow flex-basis-0 justify-center pl-16">
+<div class="min-h-full min-w-full flex bg-black text-white justify-center pt-20">
+	<div class="flex flex-col justify-center pl-16">
 		<div class="text-6xl mb-8">Hi, it's me</div>
 		<div class="text-9xl mb-8 flex">Vincent<div class="w-8 h-8 bg-orange rounded-full ml-2 mb-2 my-auto"></div></div>
 		<div class="text-6xl mb-4 title-color">A software developer</div>
 		<div class="text-2xl">{data.landingText[0]}</div>
 		<div class="text-2xl">{data.landingText[1]}</div>
 	</div>
-	<div class="flex flex-col flex-grow min-w-0 flex-basis-0 justify-center">
-		<img class="max-h-96 object-cover px-24" src="https://via.placeholder.com/150" alt="me" />
+	<div class="flex flex-col min-w-0 justify-center">
+		<div class="profile-picture" alt="me" />
 	</div>
 </div>
 
@@ -70,6 +70,13 @@ import * as data from './data.json'
 	@layer utilities {
 		.flex-basis-0 {
 			flex-basis: 0;
+		}
+		.profile-picture {
+			width: 500px;
+			height: 500px;
+			background-size: cover;
+			background-image: url(profile.png);
+			box-shadow: 0 -70px 96px 0px black inset;
 		}
 		.portfolio-size {
 			height: 580px;
