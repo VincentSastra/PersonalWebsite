@@ -53,7 +53,7 @@ import * as data from './data.json'
 		</div>
 	</div>
 </div>
-
+<!-- 
 <div class="min-w-full min-h-full">
 	<div>My Timeline</div>
 	<div class="w-full block">
@@ -69,7 +69,7 @@ import * as data from './data.json'
 			</div>
 		{/each}
 	</div>
-</div>
+</div> -->
 
 <style global lang="postcss">
 	@tailwind base;
