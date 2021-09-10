@@ -41,8 +41,8 @@ import * as data from './data.json'
 </div>
 
 <div class="min-w-full min-h-full flex bg-white text-black">
-	<div class="flex flex-col flex-grow flex-basis-0 skill-bg justify-center">
-		<div class="text-6xl mb-10 pl-st pr-52">me, myself, and i</div>
+	<div class="flex flex-col flex-grow flex-basis-0 skill-bg">
+		<div class="text-6xl mb-10 pl-st pr-52 pt-36">me, myself, and i</div>
 		<div class="text-2xl pl-st pr-52">{data.blurb}</div>
 	</div>
 	<div class="flex-grow flex-basis-0 flex justify-center">
