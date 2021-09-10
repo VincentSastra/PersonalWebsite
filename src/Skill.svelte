@@ -1,17 +1,10 @@
 <script>
-	let data = {
-		title: "Web Dev",
-		skill: [
-			"GraphQL",
-			"JavaScript",
-			"Node"
-		]
-	}
+	export let data
 </script>
 
 <div class="m-auto">
-	<div class="text-4xl font-bold mb-2">💻 Web Dev</div>
-	{#each data.skill as skill}
-		<div class="text-4xl ml-2">└ <span class="text-2xl">{skill}</span></div>
+	<div class="text-4xl font-bold mb-2">{data.title}</div>
+	{#each data.list as item}
+		<div class="text-4xl ml-2">└ <span class="text-2xl">{item}</span></div>
 	{/each}
 </div>

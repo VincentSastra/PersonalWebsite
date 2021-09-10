@@ -32,30 +32,24 @@ import * as data from './data.json'
 <div class="min-w-full flex flex-col bg-white text-black pb-32">
 	<div class="p-6 mt-12 text-6xl">My Portfolio</div>
 	<div class="grid portfolio-grid">
-		<Project />
-		<Project />
-
-		<Project />
-		<Project />
-
-		<Project />
-		<Project />
+		{#each data.projects as project}
+			<Project data={project}/>
+		{/each}
 	</div>
 </div>
 
 <div class="min-w-full min-h-full flex bg-white text-black">
-	<div class="flex flex-col flex-grow flex-basis-0 justify-center pl-16 pr-32">
-		<div class="text-6xl mb-10">Me, Myself, and I</div>
+	<div class="flex flex-col flex-grow flex-basis-0 justify-center">
+		<div class="text-6xl mb-10">me, myself, and i</div>
 		<div class="text-2xl">Fugiat ut occaecat qui voluptate deserunt tempor. 
 			Deserunt ullamco nulla qui ea dolor ullamco. 
 			Duis et excepteur occaecat dolor non est dolor reprehenderit non amet cillum ad laboris. 
 			Minim est ea labore do nisi enim consectetur nulla in anim qui voluptate laboris.</div>
 	</div>
 	<div class="grid grid-cols-2 flex-grow flex-basis-0 skill-bg">
-		<Skill />
-		<Skill />
-		<Skill />
-		<Skill />
+		{#each data.skills as skill }
+			<Skill data={skill} />
+		{/each}
 	</div>
 </div>
 
@@ -78,6 +72,7 @@ import * as data from './data.json'
 			width: 340px;
 		}
 		.portfolio-grid {
+			grid-auto-rows: 1fr;
 			grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
 		}
 		.skill-bg {
