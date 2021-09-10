@@ -12,11 +12,16 @@ module.exports = {
   },
   plugins: [],
   theme: {
+    extend: {
+      spacing: {
+        st: '73px'
+      },
+    },
     colors: {
       black: '#000000',
       white: '#E5E5E5',
       orange: '#F27059',
-      ltorange: '#F4845F'
+      ltorange: '#F7B267'
     }
   }
 }

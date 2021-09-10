@@ -4,15 +4,17 @@ import Skill from "./Skill.svelte";
 import * as data from './data.json'
 </script>
 
-<div class="fixed w-full bg-ltorange flex py-5">
-	<div class="flex-grow flex justify-center content-center text-4xl my-auto">
-		<div class="bg-black rounded-full h-8 w-8 my-auto mr-2" /> Vincent Sastra
-	</div>
-	<div class="flex-grow flex justify-evenly content-center text-2xl m-auto">
-		<div>Skills</div>
-		<div>Portfolio</div>
-		<div>Contact</div>
-		<div>Resume</div>
+<div class="fixed w-full bg-white flex">
+	<div class="flex w-full py-5 bg-orange bg-opacity-80">
+		<div class="flex-grow flex justify-center content-center text-4xl my-auto">
+			<div class="bg-black rounded-full h-8 w-8 my-auto mr-2" /> Vincent Sastra
+		</div>
+		<div class="flex-grow flex justify-evenly content-center text-2xl m-auto">
+			<div>Skills</div>
+			<div>Portfolio</div>
+			<div>Contact</div>
+			<div>Resume</div>
+		</div>
 	</div>
 </div>
 
@@ -30,7 +32,7 @@ import * as data from './data.json'
 </div>
 
 <div class="min-w-full flex flex-col bg-white text-black pb-32">
-	<div class="p-6 mt-12 text-6xl">My Portfolio</div>
+	<div class="p-6 pl-st mt-12 text-6xl">My Portfolio</div>
 	<div class="grid portfolio-grid">
 		{#each data.projects as project}
 			<Project data={project}/>
@@ -40,16 +42,18 @@ import * as data from './data.json'
 
 <div class="min-w-full min-h-full flex bg-white text-black">
 	<div class="flex flex-col flex-grow flex-basis-0 justify-center">
-		<div class="text-6xl mb-10">me, myself, and i</div>
-		<div class="text-2xl">Fugiat ut occaecat qui voluptate deserunt tempor. 
+		<div class="text-6xl mb-10 pl-st pr-52">me, myself, and i</div>
+		<div class="text-2xl pl-st pr-52">Fugiat ut occaecat qui voluptate deserunt tempor. 
 			Deserunt ullamco nulla qui ea dolor ullamco. 
 			Duis et excepteur occaecat dolor non est dolor reprehenderit non amet cillum ad laboris. 
 			Minim est ea labore do nisi enim consectetur nulla in anim qui voluptate laboris.</div>
 	</div>
-	<div class="grid grid-cols-2 flex-grow flex-basis-0 skill-bg">
-		{#each data.skills as skill }
-			<Skill data={skill} />
-		{/each}
+	<div class="flex-grow flex-basis-0 skill-bg flex justify-center">
+		<div class="grid grid-cols-2 grid-rows-2 my-auto">
+			{#each data.skills as skill }
+				<Skill data={skill} />
+			{/each}
+		</div>
 	</div>
 </div>
 
