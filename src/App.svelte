@@ -41,14 +41,11 @@ import * as data from './data.json'
 </div>
 
 <div class="min-w-full min-h-full flex bg-white text-black">
-	<div class="flex flex-col flex-grow flex-basis-0 justify-center">
+	<div class="flex flex-col flex-grow flex-basis-0 skill-bg justify-center">
 		<div class="text-6xl mb-10 pl-st pr-52">me, myself, and i</div>
-		<div class="text-2xl pl-st pr-52">Fugiat ut occaecat qui voluptate deserunt tempor. 
-			Deserunt ullamco nulla qui ea dolor ullamco. 
-			Duis et excepteur occaecat dolor non est dolor reprehenderit non amet cillum ad laboris. 
-			Minim est ea labore do nisi enim consectetur nulla in anim qui voluptate laboris.</div>
+		<div class="text-2xl pl-st pr-52">{data.blurb}</div>
 	</div>
-	<div class="flex-grow flex-basis-0 skill-bg flex justify-center">
+	<div class="flex-grow flex-basis-0 flex justify-center">
 		<div class="grid grid-cols-2 grid-rows-2 my-auto">
 			{#each data.skills as skill }
 				<Skill data={skill} />
@@ -87,7 +84,7 @@ import * as data from './data.json'
 			grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
 		}
 		.skill-bg {
-			background-image: linear-gradient(to bottom left, #F27059, #E5E5E5);
+			background-image: linear-gradient(132.24deg, rgba(242, 92, 84, 0.8) -9.32%, rgba(244, 132, 95, 0.854167) 35.28%, rgba(247, 157, 101, 0.530744) 77.17%, rgba(247, 178, 103, 0) 120.41%);;
 		}
 		.title-color {
 			background-image: linear-gradient(350deg, #E5E5E5, #F27059);			
