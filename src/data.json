@@ -3,45 +3,77 @@
 		"I'm graduating from University of British Columbia class of 2023",
 		"Looking forward to learning new things."
 	],
-	"projects": [{
-		"title": "Modern Waiter",
-		"type": "Android Restaurant Ordering System"
-	}, {
-		"title": "SpellRise",
-		"type": "Unity 2D Game"
-	}, {
-		"title": "Chess Website",
-		"type": "React Chess Website"
-	}, {
-		"title": "Virtual Wardrobe",
-		"type": "AR IOS Application"
-	}],
+	"projects": [
+		{
+			"title": "Modern Waiter",
+			"type": "Android Restaurant Ordering System"
+		},
+		{
+			"title": "SpellRise",
+			"type": "Unity 2D Game"
+		},
+		{
+			"title": "Chess Website",
+			"type": "React Chess Website"
+		},
+		{
+			"title": "Virtual Wardrobe",
+			"type": "AR IOS Application"
+		}
+	],
 	"blurb": "Nulla culpa et consequat commodo non amet voluptate aliquip id non cillum reprehenderit eu. Quis quis magna laboris aliquip excepteur anim pariatur dolor eiusmod. Reprehenderit do magna irure et.",
-	"skills": [{
-		"title": "💻 Web Dev",
-		"list": [
-			"Node",
-			"React",
-			"Express",
-			"GraphQL",
-			"SQL",
-			"HTML + CSS"
-		]
-	}, {
-		"title": "⚙ Deployment", 
-		"list": [
-			"AWS",
-			"Docker",
-			"Kubernetes",
-			"Jenkins",
-			"Helm Chart"
-		]
-	}, {
-		"title": "🎮 Game Dev",
-		"list": [
-			"Unity",
-			"C#",
-			"C++"
-		]
-	}]
+	"skills": [
+		{
+			"title": "💻 Web Dev",
+			"list": [
+				"Node",
+				"React",
+				"Express",
+				"GraphQL",
+				"SQL",
+				"HTML + CSS"
+			]
+		},
+		{
+			"title": "⚙ Deployment",
+			"list": [
+				"AWS",
+				"Docker",
+				"Kubernetes",
+				"Jenkins",
+				"Helm Chart"
+			]
+		},
+		{
+			"title": "🎮 Game Dev",
+			"list": [
+				"Unity",
+				"C#",
+				"C++"
+			]
+		}
+	],
+	"timeline": [
+		{
+			"date": "May, 2021",
+			"data": {
+				"company": "Safe Software",
+				"job": "Software Developer"
+			}
+		},
+		{
+			"date": "May, 2021",
+			"data": {
+				"company": "Safe Software",
+				"job": "Software Developer"
+			}
+		},
+		{
+			"date": "May, 2021",
+			"data": {
+				"company": "Safe Software",
+				"job": "Software Developer"
+			}
+		}
+	]
 }

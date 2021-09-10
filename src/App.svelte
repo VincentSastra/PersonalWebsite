@@ -54,9 +54,21 @@ import * as data from './data.json'
 	</div>
 </div>
 
-<div class="min-w-full flex">
+<div class="min-w-full min-h-full">
 	<div>My Timeline</div>
-	<div></div>
+	<div class="w-full block">
+		{#each data.timeline as event, i}
+			<div class="flex w-full">
+				{#if i % 2 === 0}
+					<div class="flex-basis-0 flex-grow border-r-2" >{event.date}</div>
+					<div class="flex-basis-0 flex-grow">{event.company}</div>
+				{:else}
+					<div class="flex-basis-0 flex-grow border-r-2">{event.company}</div>
+					<div class="flex-basis-0 flex-grow">{event.date}</div>
+				{/if}
+			</div>
+		{/each}
+	</div>
 </div>
 
 <style global lang="postcss">
