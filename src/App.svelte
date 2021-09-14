@@ -1,7 +1,8 @@
 <script>
 import Project from "./Project.svelte";
 import Skill from "./Skill.svelte";
-import * as data from './data.json'
+import Work from "./Work.svelte";
+import * as data from './data.json';
 </script>
 
 <div class="fixed w-full bg-white flex">
@@ -53,33 +54,38 @@ import * as data from './data.json'
 		</div>
 	</div>
 </div>
-<!-- 
+
 <div class="min-w-full min-h-full">
-	<div>My Timeline</div>
+	<div class="p-6 pl-st mt-12 text-6xl">My Timeline</div>
 	<div class="w-full block">
 		{#each data.timeline as event, i}
-			<div class="flex w-full">
-				{#if i % 2 === 0}
-					<div class="flex-basis-0 flex-grow border-r-2" >{event.date}</div>
-					<div class="flex-basis-0 flex-grow">{event.company}</div>
-				{:else}
-					<div class="flex-basis-0 flex-grow border-r-2">{event.company}</div>
-					<div class="flex-basis-0 flex-grow">{event.date}</div>
-				{/if}
+			<div class={`flex w-full ${i % 2 === 0 ? "flex-row-reverse" : "flex-row"}`}>
+				<div class={`flex flex-basis-0 py-10 flex-grow ${i % 2 === 1 ? "border-r-2 justify-end" : ""}`}>
+					<Work data={event.data} />
+				</div>
+				<div class="work-circle"></div>
+				<div class={`flex flex-basis-0 py-10 flex-grow ${i % 2 === 0 ? "border-r-2 justify-end" : ""}`}>
+					<div class="mx-work text-4xl font-futura">{event.date.toUpperCase()}</div>
+				</div>
 			</div>
 		{/each}
 	</div>
-</div> -->
+</div>
 
 <style global lang="postcss">
 	@tailwind base;
 	@tailwind components;
 	@tailwind utilities;
-	@font-face {
-		font-family: "Poppins";
-		src: local('Poppins'), url(../public/Poppins-Regular.ttf) format('ttf');
+	@layer base {
+		@font-face {
+			font-family: "Poppin";
+			src: url(./font/Poppins-Regular.ttf)
+		}
+		@font-face {
+			font-family: "Futurra";
+			src: url(./font/futura.ttf);
+		}
 	}
-	
 	@layer utilities {
 		.flex-basis-0 {
 			flex-basis: 0;
@@ -102,10 +108,17 @@ import * as data from './data.json'
 		.skill-bg {
 			background-image: linear-gradient(132.24deg, rgba(242, 92, 84, 0.8) -9.32%, rgba(244, 132, 95, 0.854167) 35.28%, rgba(247, 157, 101, 0.530744) 77.17%, rgba(247, 178, 103, 0) 120.41%);;
 		}
+		.mx-work {
+			margin-right: 3vw;
+			margin-left: 3vw;
+		}
 		.title-color {
 			background: linear-gradient(90.86deg, #F27059 0.33%, #F7B267 46.16%, #FFF4D9 103.85%);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
+		}
+		.font-futura {
+			font-family: Futura, sans-serif;
 		}
 	}
 	:global(body) {

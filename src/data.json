@@ -58,21 +58,24 @@
 			"date": "May, 2021",
 			"data": {
 				"company": "Safe Software",
-				"job": "Software Developer"
+				"job": "Software Developer",
+				"description": "Esse irure cillum anim culpa esse elit in tempor."
 			}
 		},
 		{
 			"date": "May, 2021",
 			"data": {
 				"company": "Safe Software",
-				"job": "Software Developer"
+				"job": "Software Developer",
+				"description": "Esse irure cillum anim culpa esse elit in tempor."
 			}
 		},
 		{
 			"date": "May, 2021",
 			"data": {
 				"company": "Safe Software",
-				"job": "Software Developer"
+				"job": "Software Developer",
+				"description": "Esse irure cillum anim culpa esse elit in tempor."
 			}
 		}
 	]
