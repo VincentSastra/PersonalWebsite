@@ -5,6 +5,11 @@ import Work from "./Work.svelte";
 import Contact from "./Contact.svelte"
 import * as data from './data.json';
 </script>
+<svelte:head>
+	<script
+		src="https://kit.fontawesome.com/b43798ce01.js"
+		crossorigin="anonymous"></script>
+</svelte:head>
 
 <div class="fixed w-full bg-white flex z-50">
 	<div class="flex w-full py-5 bg-orange">
@@ -79,6 +84,21 @@ import * as data from './data.json';
 
 <Contact />
 
+<div class="bg-black">
+	<div class="flex justify-center py-20">
+		<div class="icon-size">
+			<i class="fab fa-github fa-3x 2xl:pr-8" />
+		</div>
+		<div class="icon-size">
+			<i class="fab fa-linkedin fa-3x 2xl:pr-8" />
+		</div>
+		<div class="icon-size">
+			<i class="fas fa-inbox fa-3x 2xl:pr-8" />
+		</div>
+	</div>	
+	<div class="text-white text-2xl flex flex-row-reverse p-10">Designed by Sally</div>
+</div>
+
 <style global lang="postcss">
 	@tailwind base;
 	@tailwind components;
@@ -123,6 +143,15 @@ import * as data from './data.json';
 			background: linear-gradient(90.86deg, #F27059 0.33%, #F7B267 46.16%, #FFF4D9 103.85%);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
+		}
+		.icon-size {
+			height: 72px;
+			width: 72px;
+			@apply bg-white mx-4  rounded-full flex;
+		}
+		i {
+			padding: 0px !important;
+			@apply m-auto text-orange;
 		}
 		.font-futura {
 			font-family: Futura, sans-serif;
