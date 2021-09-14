@@ -2,11 +2,12 @@
 import Project from "./Project.svelte";
 import Skill from "./Skill.svelte";
 import Work from "./Work.svelte";
+import Contact from "./Contact.svelte"
 import * as data from './data.json';
 </script>
 
 <div class="fixed w-full bg-white flex z-50">
-	<div class="flex w-full py-5 bg-orange bg-opacity-80">
+	<div class="flex w-full py-5 bg-orange">
 		<div class="flex-grow flex justify-center content-center text-4xl my-auto">
 			<div class="bg-black rounded-full h-8 w-8 my-auto mr-2" /> Vincent Sastra
 		</div>
@@ -32,8 +33,8 @@ import * as data from './data.json';
 	</div>
 </div>
 
-<div class="min-w-full flex flex-col bg-white text-black pb-32">
-	<div class="p-6 pl-st mt-12 text-6xl">My Portfolio</div>
+<div class="min-w-full flex flex-col bg-white text-black pt-20 pb-20">
+	<div class="pl-st mt-12 text-6xl">My Portfolio</div>
 	<div class="grid portfolio-grid">
 		{#each data.projects as project}
 			<Project data={project}/>
@@ -55,8 +56,8 @@ import * as data from './data.json';
 	</div>
 </div>
 
-<div class="min-w-full min-h-full">
-	<div class="p-6 pl-st mt-12 text-6xl">My Timeline</div>
+<div class="min-w-full min-h-full pt-20 pb-20">
+	<div class="pl-st mt-12 text-6xl">My Timeline</div>
 	<div class="w-full block">
 		{#each data.timeline as event, i}
 			<div class={`flex w-full ${i % 2 === 0 ? "flex-row-reverse" : "flex-row"}`}>
@@ -75,6 +76,8 @@ import * as data from './data.json';
 		{/each}
 	</div>
 </div>
+
+<Contact />
 
 <style global lang="postcss">
 	@tailwind base;
