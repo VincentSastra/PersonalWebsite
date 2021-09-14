@@ -5,7 +5,7 @@ import Work from "./Work.svelte";
 import * as data from './data.json';
 </script>
 
-<div class="fixed w-full bg-white flex">
+<div class="fixed w-full bg-white flex z-50">
 	<div class="flex w-full py-5 bg-orange bg-opacity-80">
 		<div class="flex-grow flex justify-center content-center text-4xl my-auto">
 			<div class="bg-black rounded-full h-8 w-8 my-auto mr-2" /> Vincent Sastra
@@ -60,11 +60,15 @@ import * as data from './data.json';
 	<div class="w-full block">
 		{#each data.timeline as event, i}
 			<div class={`flex w-full ${i % 2 === 0 ? "flex-row-reverse" : "flex-row"}`}>
-				<div class={`flex flex-basis-0 py-10 flex-grow ${i % 2 === 1 ? "border-r-2 justify-end" : ""}`}>
+				<div class={`flex flex-basis-0 py-10 flex-grow ${i % 2 === 1 ? "border-r justify-end" : "border-l"}`}>
 					<Work data={event.data} />
 				</div>
-				<div class="work-circle"></div>
-				<div class={`flex flex-basis-0 py-10 flex-grow ${i % 2 === 0 ? "border-r-2 justify-end" : ""}`}>
+				<div class="absolute flex w-full justify-center">
+					<div class="bg-white border-2 rounded-full w-10 h-10 my-10 flex justify-center">
+						<div class="bg-orange rounded-full w-8 h-8 my-auto" />
+					</div>
+				</div>
+				<div class={`flex flex-basis-0 py-10 flex-grow ${i % 2 === 0 ? "border-r justify-end" : "border-l"}`}>
 					<div class="mx-work text-4xl font-futura">{event.date.toUpperCase()}</div>
 				</div>
 			</div>
