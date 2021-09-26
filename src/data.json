@@ -1,9 +1,13 @@
 {
 	"landingText": [
 		"Graduating from University of British Columbia class of 2023",
-		"Looking for challenges and knowledge"
+		"Looking for new challenges and opportunities"
 	],
 	"projects": [
+		{
+			"title": "Image Repository",
+			"type": "An AWS infrastructure & website to store and view images built"
+		},
 		{
 			"title": "Modern Waiter",
 			"type": "Android Restaurant Ordering System"
@@ -24,18 +28,27 @@
 	"blurb": "Nulla culpa et consequat commodo non amet voluptate aliquip id non cillum reprehenderit eu. Quis quis magna laboris aliquip excepteur anim pariatur dolor eiusmod. Reprehenderit do magna irure et.",
 	"skills": [
 		{
-			"title": "💻 Web Dev",
+			"title": "Frontend Dev",
+			"icon": "fas fa-laptop-code",
 			"list": [
-				"Node",
 				"React",
-				"Express",
-				"GraphQL",
-				"SQL",
-				"HTML + CSS"
+				"HTML/CSS",
+				"SASS/Tailwind"
 			]
 		},
 		{
-			"title": "⚙ Deployment",
+			"title": " Backend Dev",
+			"icon": "fas fa-server",
+			"list": [
+				"Node/Express",
+				"GraphQL",
+				"SQL",
+				"Redis"
+			]
+		},
+		{
+			"title": "Deployment",
+			"icon": "fas fa-cogs",
 			"list": [
 				"AWS",
 				"Docker",
@@ -45,7 +58,8 @@
 			]
 		},
 		{
-			"title": "🎮 Game Dev",
+			"title": "Game Dev",
+			"icon": "fas fa-gamepad",
 			"list": [
 				"Unity",
 				"C#",
@@ -58,24 +72,24 @@
 			"date": "May, 2021",
 			"data": {
 				"company": "Safe Software",
-				"job": "Software Developer",
-				"description": "Esse irure cillum anim culpa esse elit in tempor."
+				"job": "Software Developer Co-op",
+				"description": " My team creates a React + GraphQL web application that displays the development, testing, and deployment information of each version's build of the Safe FME software. I design and implement GraphQL queries that aggregate data from different SQL databases and APIs and used the DataLoader library to batch parallel database queries and cache responses to Redis to reduce GraphQL query times by up to 90%. I also deployed a Lambda function to update the SQL database based on git commits using GitHub's webhooks. Moreover, I created an authentication microservice using JSON web tokens and Google login on Node.js to authenticate database writes and restrict administrator pages on the web application. And I implemented on a responsive React application that lets the development team search, modify, and filter for relevant internal data. Furthermore, I built a CI/CD pipeline with automated Jest and Cypress testing on Jenkins, building and pushing the container to Docker, and deploying a microservice cluster using Helm and Kubernetes in AWS EKS."
 			}
 		},
 		{
-			"date": "May, 2021",
+			"date": "January, 2021",
 			"data": {
-				"company": "Safe Software",
-				"job": "Software Developer",
-				"description": "Esse irure cillum anim culpa esse elit in tempor."
+				"company": "UBC Department of Computer and Electrical Engineering",
+				"job": "Research Assistant",
+				"description": "Setup and analyze testing simulation to measure the performance of machine learning computations on a Processing In Memory architecture (PIM)."
 			}
 		},
 		{
-			"date": "May, 2021",
+			"date": "January, 2021",
 			"data": {
-				"company": "Safe Software",
-				"job": "Software Developer",
-				"description": "Esse irure cillum anim culpa esse elit in tempor."
+				"company": "UBC Faculty of Forestry",
+				"job": "Instructional Support",
+				"description": " Created detailed guides and workshops regarding teaching technologies such as Canvas for the faculty and conducted surveys and analyzed responses on Qualtrics."
 			}
 		}
 	]
