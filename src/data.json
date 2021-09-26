@@ -6,7 +6,7 @@
 	"projects": [
 		{
 			"title": "Image Repository",
-			"type": "An AWS infrastructure & website to store and view images built"
+			"type": "A website to store and view images"
 		},
 		{
 			"title": "Modern Waiter",
@@ -73,7 +73,7 @@
 			"data": {
 				"company": "Safe Software",
 				"job": "Software Developer Co-op",
-				"description": " My team creates a React + GraphQL web application that displays the development, testing, and deployment information of each version's build of the Safe FME software. I design and implement GraphQL queries that aggregate data from different SQL databases and APIs and used the DataLoader library to batch parallel database queries and cache responses to Redis to reduce GraphQL query times by up to 90%. I also deployed a Lambda function to update the SQL database based on git commits using GitHub's webhooks. Moreover, I created an authentication microservice using JSON web tokens and Google login on Node.js to authenticate database writes and restrict administrator pages on the web application. And I implemented on a responsive React application that lets the development team search, modify, and filter for relevant internal data. Furthermore, I built a CI/CD pipeline with automated Jest and Cypress testing on Jenkins, building and pushing the container to Docker, and deploying a microservice cluster using Helm and Kubernetes in AWS EKS."
+				"description": "My team and I created a GraphQL + React web application to track and display internal analytic data. I utilize Redis caching and Dataloader batching to improve performance. \nFinally, I deployed the website using AWS EKS, Helm Chart, and Docker to ensure liveliness and readiness."
 			}
 		},
 		{

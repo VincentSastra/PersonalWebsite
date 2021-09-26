@@ -100,19 +100,17 @@ import * as data from './data.json';
 </div>
 
 <style global lang="postcss">
+	@font-face {
+		font-family: "Poppin";
+		src: url(/fonts/Poppins-Regular.ttf);
+	}
+	@font-face {
+		font-family: "Futurra";
+		src: url(/fonts/futura.ttf);
+	}
 	@tailwind base;
 	@tailwind components;
 	@tailwind utilities;
-	@layer base {
-		@font-face {
-			font-family: "Poppin";
-			src: url(./font/Poppins-Regular.ttf)
-		}
-		@font-face {
-			font-family: "Futurra";
-			src: url(./font/futura.ttf);
-		}
-	}
 	@layer utilities {
 		.flex-basis-0 {
 			flex-basis: 0;
@@ -154,10 +152,11 @@ import * as data from './data.json';
 			@apply m-auto text-orange;
 		}
 		.font-futura {
-			font-family: Futura, sans-serif;
+			font-family: Futura;
 		}
 	}
 	:global(body) {
+		font-family: Poppin;
 		@apply m-0 p-0 bg-white;
 	}
 	</style>
