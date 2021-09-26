@@ -31,6 +31,10 @@
 	.input:focus-visible {
 		outline: none;
 		border-bottom: 2px solid black;
-		background-color: #00000010
+		background-color: #00000005;
+	}
+
+	:focus-visible::placeholder {
+		color: transparent
 	}
 </style>
