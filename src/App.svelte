@@ -129,6 +129,7 @@ import * as data from './data.json';
 		.portfolio-grid {
 			grid-auto-rows: 1fr;
 			grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+			grid-auto-flow: row dense;
 		}
 		.skill-bg {
 			background-image: linear-gradient(132.24deg, rgba(242, 92, 84, 0.8) -9.32%, rgba(244, 132, 95, 0.854167) 35.28%, rgba(247, 157, 101, 0.530744) 77.17%, rgba(247, 178, 103, 0) 120.41%);;
