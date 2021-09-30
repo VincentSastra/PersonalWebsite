@@ -31,8 +31,7 @@
   }
   .carousel {
     display: flex;
-    width: 100vw;
-    max-width: 100vw;
+    width: 100%;
     justify-content: center;
     margin: 0 8px;
   }
@@ -79,6 +78,7 @@
 
   button {
     background-color: transparent;
+    color: black;
     border: 0;
   }
   button:hover {
@@ -91,7 +91,7 @@
 <main>
   <div class="carousel">
     <button class="carousel-ctrl" on:click={e => slide(-concurrentSlides)}>
-      <i class="fas fa-chevron-left">
+      <i class="fas fa-chevron-left text-black fa-lg">
       </i>
     </button>
     <div class="slides">
@@ -104,7 +104,7 @@
       {/each}
     </div>
     <button class="carousel-ctrl"  on:click={e => slide(concurrentSlides)}>
-      <i class="fas fa-chevron-right">
+      <i class="fas fa-chevron-right text-black fa-lg">
       </i>
     </button>
   </div>
