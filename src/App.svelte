@@ -119,7 +119,7 @@ import * as data from './data.json';
 			width: 500px;
 			height: 500px;
 			background-size: cover;
-			background-image: url(profile.png);
+			background-image: url(/images/profile.png);
 			box-shadow: 0 -70px 96px 0px black inset;
 		}
 		.portfolio-size {
