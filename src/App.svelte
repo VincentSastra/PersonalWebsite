@@ -1,9 +1,9 @@
 <script>
-import Project from "./Project.svelte";
 import Skill from "./Skill.svelte";
 import Work from "./Work.svelte";
 import Contact from "./Contact.svelte"
 import * as data from './data.json';
+import ProjectGallery from "./ProjectGallery.svelte";
 </script>
 <svelte:head>
 	<script
@@ -38,14 +38,7 @@ import * as data from './data.json';
 	</div>
 </div>
 
-<div class="min-w-full flex flex-col bg-white text-black pt-20 pb-20">
-	<div class="pl-st mt-12 text-6xl">My Portfolio</div>
-	<div class="grid portfolio-grid">
-		{#each data.projects as project}
-			<Project data={project}/>
-		{/each}
-	</div>
-</div>
+<ProjectGallery />
 
 <div class="min-w-full min-h-full flex bg-white text-black">
 	<div class="flex flex-col flex-grow flex-basis-0 skill-bg">
@@ -129,6 +122,7 @@ import * as data from './data.json';
 		.portfolio-grid {
 			grid-auto-rows: 1fr;
 			grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+			grid-auto-rows: auto;
 			grid-auto-flow: row dense;
 		}
 		.skill-bg {
