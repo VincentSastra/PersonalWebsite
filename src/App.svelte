@@ -33,7 +33,7 @@ import ProjectGallery from "./ProjectGallery.svelte";
 		<div class="text-2xl">{data.landingText[0]}</div>
 		<div class="text-2xl">{data.landingText[1]}</div>
 	</div>
-	<div class="flex flex-col min-w-0 justify-center">
+	<div class="flex flex-col min-w-0 justify-center overflow-x-hidden">
 		<div class="profile-picture" alt="me" />
 	</div>
 </div>
